@@ -6,6 +6,7 @@
 #include <couv.hpp>
 #include <thread>
 #include <chrono>
+#include <vector>
 
 couv::task<> tcp_test()
 {
