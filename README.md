@@ -5,7 +5,7 @@ libuv with c++ coroutines
 ```C++
 couv::task<> tcp_test()
 {
-    couv::getaddrinfo info("www.google.com", "80");
+    couv::getaddrinfo info("www.baidu.com", "80");
     std::cout << (int)co_await info << std::endl;
 
     couv::tcp tcp;

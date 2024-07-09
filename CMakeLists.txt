@@ -1,6 +1,19 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.15)
 project(libcouv)
-add_definitions(-std=c++20 -O3 -Werror -fcoroutines -fext-numeric-literals)
+
+
+set(CMAKE_CXX_STANDARD 20)
+
+include(FetchContent)
+
+FetchContent_Declare(
+    libuv
+    GIT_REPOSITORY https://github.com/libuv/libuv
+    GIT_TAG        e8b7eb6908a847ffbe6ab2eec7428e43a0aa53a2 # release-1.44.1
+)
+
+FetchContent_MakeAvailable(libuv)
+
 include_directories(include)
 
 add_subdirectory(tests)
